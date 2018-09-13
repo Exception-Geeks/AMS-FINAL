@@ -46,7 +46,7 @@
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
                     <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand" href="./"><img src="~/assets/images/logo.png" alt="Logo"></a>
+                <a class="navbar-brand" href="./"> <h4><strong>Welcome </strong> Admin</h4>
                 <a class="navbar-brand hidden" href="./"><img src="~/assets/images/logo2.png" alt="Logo"></a>
             </div>
 
@@ -55,7 +55,7 @@
                     <li class="active">
                         <a href="~/AdminPortal"> <i class="menu-icon fa fa-dashboard"></i>Dashboard </a>
                     </li>
-                    <h3 class="menu-title">Functionalities</h3><!-- /.menu-title -->
+                    <h3 class="menu-title">Add</h3><!-- /.menu-title -->
 
 
                     <li>
@@ -78,6 +78,25 @@
                         <a href="@Url.Action("Create", "Students")"> <i class="menu-icon ti-user"></i>Students </a>
                     </li>
 
+                    <h3 class="menu-title">View</h3><!-- /.menu-title -->
+
+
+                    <li>
+                        <a href="@Url.Action("Index", "Teachers")"> <i class="menu-icon ti-user"></i>Teachers </a>
+                    </li>
+
+                    <li>
+                        <a href="@Url.Action("Index", "Departments")"> <i class="menu-icon ti-home "></i>Departments </a>
+                    </li>
+
+                    <li>
+                        <a href="@Url.Action("Index", "Subjects")"> <i class="menu-icon ti-book"></i>Subjects </a>
+                    </li>
+
+                    <li>
+                        <a href="@Url.Action("Index", "Students")"> <i class="menu-icon ti-user"></i>Students </a>
+                    </li>
+
                     <h3 class="menu-title">Personalize</h3><!-- /.menu-title -->
 
 
@@ -90,8 +109,7 @@
                     </li>
 
 
-
-            </div><!-- /.navbar-collapse -->
+</div><!-- /.navbar-collapse -->
         </nav>
     </aside><!-- /#left-panel -->
     <!-- Left Panel -->
