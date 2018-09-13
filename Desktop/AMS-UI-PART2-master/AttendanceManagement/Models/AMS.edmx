@@ -127,7 +127,7 @@
           <Property Name="Student_USN" Type="nvarchar" MaxLength="10" Nullable="false" />
           <Property Name="Teacher_TID" Type="nvarchar" MaxLength="7" Nullable="false" />
         </EntityType>
-        <Association Name="FK__Attendanc__Stude__1CF15040">
+        <Association Name="FK__Attendanc__Stude__2A4B4B5E">
           <End Role="Student" Type="Self.Student" Multiplicity="1" />
           <End Role="Attendance" Type="Self.Attendance" Multiplicity="*" />
           <ReferentialConstraint>
@@ -139,7 +139,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Attendanc__Subje__1BFD2C07">
+        <Association Name="FK__Attendanc__Subje__2B3F6F97">
           <End Role="Subject" Type="Self.Subject" Multiplicity="1" />
           <End Role="Attendance" Type="Self.Attendance" Multiplicity="*" />
           <ReferentialConstraint>
@@ -151,7 +151,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Attendanc__Teach__1DE57479">
+        <Association Name="FK__Attendanc__Teach__2C3393D0">
           <End Role="Teacher" Type="Self.Teacher" Multiplicity="1" />
           <End Role="Attendance" Type="Self.Attendance" Multiplicity="*" />
           <ReferentialConstraint>
@@ -163,7 +163,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Student__Departm__1920BF5C">
+        <Association Name="FK__Student__Departm__2D27B809">
           <End Role="Department" Type="Self.Department" Multiplicity="0..1">
             <OnDelete Action="Cascade" />
           </End>
@@ -177,7 +177,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Student__Subject__182C9B23">
+        <Association Name="FK__Student__Subject__2E1BDC42">
           <End Role="Subject" Type="Self.Subject" Multiplicity="1" />
           <End Role="Student" Type="Self.Student" Multiplicity="*" />
           <ReferentialConstraint>
@@ -189,7 +189,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Subject__Departm__15502E78">
+        <Association Name="FK__Subject__Departm__2F10007B">
           <End Role="Department" Type="Self.Department" Multiplicity="0..1" />
           <End Role="Subject" Type="Self.Subject" Multiplicity="*" />
           <ReferentialConstraint>
@@ -201,7 +201,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Teacher__Departm__1273C1CD">
+        <Association Name="FK__Teacher__Departm__300424B4">
           <End Role="Department" Type="Self.Department" Multiplicity="0..1" />
           <End Role="Teacher" Type="Self.Teacher" Multiplicity="*" />
           <ReferentialConstraint>
@@ -213,7 +213,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Teacher__REFID__34C8D9D1">
+        <Association Name="FK__Teacher__REFID__30F848ED">
           <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="0..1" />
           <End Role="Teacher" Type="Self.Teacher" Multiplicity="*" />
           <ReferentialConstraint>
@@ -225,7 +225,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Teacher_T__Stude__21B6055D">
+        <Association Name="FK__Teacher_T__Stude__31EC6D26">
           <End Role="Student" Type="Self.Student" Multiplicity="1" />
           <End Role="Teacher_Teaches_Student" Type="Self.Teacher_Teaches_Student" Multiplicity="*" />
           <ReferentialConstraint>
@@ -237,7 +237,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Teacher_T__Subje__20C1E124">
+        <Association Name="FK__Teacher_T__Subje__32E0915F">
           <End Role="Subject" Type="Self.Subject" Multiplicity="1" />
           <End Role="Teacher_Teaches_Student" Type="Self.Teacher_Teaches_Student" Multiplicity="*" />
           <ReferentialConstraint>
@@ -249,7 +249,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Teacher_T__Teach__22AA2996">
+        <Association Name="FK__Teacher_T__Teach__33D4B598">
           <End Role="Teacher" Type="Self.Teacher" Multiplicity="1" />
           <End Role="Teacher_Teaches_Student" Type="Self.Teacher_Teaches_Student" Multiplicity="*" />
           <ReferentialConstraint>
@@ -330,47 +330,47 @@
           <EntitySet Name="Subject" EntityType="Self.Subject" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Teacher" EntityType="Self.Teacher" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Teacher_Teaches_Student" EntityType="Self.Teacher_Teaches_Student" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK__Attendanc__Stude__1CF15040" Association="Self.FK__Attendanc__Stude__1CF15040">
+          <AssociationSet Name="FK__Attendanc__Stude__2A4B4B5E" Association="Self.FK__Attendanc__Stude__2A4B4B5E">
             <End Role="Student" EntitySet="Student" />
             <End Role="Attendance" EntitySet="Attendance" />
           </AssociationSet>
-          <AssociationSet Name="FK__Attendanc__Subje__1BFD2C07" Association="Self.FK__Attendanc__Subje__1BFD2C07">
+          <AssociationSet Name="FK__Attendanc__Subje__2B3F6F97" Association="Self.FK__Attendanc__Subje__2B3F6F97">
             <End Role="Subject" EntitySet="Subject" />
             <End Role="Attendance" EntitySet="Attendance" />
           </AssociationSet>
-          <AssociationSet Name="FK__Attendanc__Teach__1DE57479" Association="Self.FK__Attendanc__Teach__1DE57479">
+          <AssociationSet Name="FK__Attendanc__Teach__2C3393D0" Association="Self.FK__Attendanc__Teach__2C3393D0">
             <End Role="Teacher" EntitySet="Teacher" />
             <End Role="Attendance" EntitySet="Attendance" />
           </AssociationSet>
-          <AssociationSet Name="FK__Student__Departm__1920BF5C" Association="Self.FK__Student__Departm__1920BF5C">
+          <AssociationSet Name="FK__Student__Departm__2D27B809" Association="Self.FK__Student__Departm__2D27B809">
             <End Role="Department" EntitySet="Department" />
             <End Role="Student" EntitySet="Student" />
           </AssociationSet>
-          <AssociationSet Name="FK__Student__Subject__182C9B23" Association="Self.FK__Student__Subject__182C9B23">
+          <AssociationSet Name="FK__Student__Subject__2E1BDC42" Association="Self.FK__Student__Subject__2E1BDC42">
             <End Role="Subject" EntitySet="Subject" />
             <End Role="Student" EntitySet="Student" />
           </AssociationSet>
-          <AssociationSet Name="FK__Subject__Departm__15502E78" Association="Self.FK__Subject__Departm__15502E78">
+          <AssociationSet Name="FK__Subject__Departm__2F10007B" Association="Self.FK__Subject__Departm__2F10007B">
             <End Role="Department" EntitySet="Department" />
             <End Role="Subject" EntitySet="Subject" />
           </AssociationSet>
-          <AssociationSet Name="FK__Teacher__Departm__1273C1CD" Association="Self.FK__Teacher__Departm__1273C1CD">
+          <AssociationSet Name="FK__Teacher__Departm__300424B4" Association="Self.FK__Teacher__Departm__300424B4">
             <End Role="Department" EntitySet="Department" />
             <End Role="Teacher" EntitySet="Teacher" />
           </AssociationSet>
-          <AssociationSet Name="FK__Teacher__REFID__34C8D9D1" Association="Self.FK__Teacher__REFID__34C8D9D1">
+          <AssociationSet Name="FK__Teacher__REFID__30F848ED" Association="Self.FK__Teacher__REFID__30F848ED">
             <End Role="AspNetUsers" EntitySet="AspNetUsers" />
             <End Role="Teacher" EntitySet="Teacher" />
           </AssociationSet>
-          <AssociationSet Name="FK__Teacher_T__Stude__21B6055D" Association="Self.FK__Teacher_T__Stude__21B6055D">
+          <AssociationSet Name="FK__Teacher_T__Stude__31EC6D26" Association="Self.FK__Teacher_T__Stude__31EC6D26">
             <End Role="Student" EntitySet="Student" />
             <End Role="Teacher_Teaches_Student" EntitySet="Teacher_Teaches_Student" />
           </AssociationSet>
-          <AssociationSet Name="FK__Teacher_T__Subje__20C1E124" Association="Self.FK__Teacher_T__Subje__20C1E124">
+          <AssociationSet Name="FK__Teacher_T__Subje__32E0915F" Association="Self.FK__Teacher_T__Subje__32E0915F">
             <End Role="Subject" EntitySet="Subject" />
             <End Role="Teacher_Teaches_Student" EntitySet="Teacher_Teaches_Student" />
           </AssociationSet>
-          <AssociationSet Name="FK__Teacher_T__Teach__22AA2996" Association="Self.FK__Teacher_T__Teach__22AA2996">
+          <AssociationSet Name="FK__Teacher_T__Teach__33D4B598" Association="Self.FK__Teacher_T__Teach__33D4B598">
             <End Role="Teacher" EntitySet="Teacher" />
             <End Role="Teacher_Teaches_Student" EntitySet="Teacher_Teaches_Student" />
           </AssociationSet>
@@ -454,7 +454,7 @@
           <Property Name="IsAdmin" Type="Int32" />
           <NavigationProperty Name="AspNetUserClaims" Relationship="Self.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" FromRole="AspNetUsers" ToRole="AspNetUserClaims" />
           <NavigationProperty Name="AspNetUserLogins" Relationship="Self.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" FromRole="AspNetUsers" ToRole="AspNetUserLogins" />
-          <NavigationProperty Name="Teachers" Relationship="Self.FK__Teacher__REFID__34C8D9D1" FromRole="AspNetUsers" ToRole="Teacher" />
+          <NavigationProperty Name="Teachers" Relationship="Self.FK__Teacher__REFID__30F848ED" FromRole="AspNetUsers" ToRole="Teacher" />
           <NavigationProperty Name="AspNetRoles" Relationship="Self.AspNetUserRoles" FromRole="AspNetUsers" ToRole="AspNetRoles" />
         </EntityType>
         <EntityType Name="Attendance">
@@ -471,9 +471,9 @@
           <Property Name="Date" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="Slot" Type="Int32" Nullable="false" />
           <Property Name="Status" Type="String" MaxLength="1" FixedLength="true" Unicode="true" Nullable="false" />
-          <NavigationProperty Name="Student" Relationship="Self.FK__Attendanc__Stude__1CF15040" FromRole="Attendance" ToRole="Student" />
-          <NavigationProperty Name="Subject" Relationship="Self.FK__Attendanc__Subje__1BFD2C07" FromRole="Attendance" ToRole="Subject" />
-          <NavigationProperty Name="Teacher" Relationship="Self.FK__Attendanc__Teach__1DE57479" FromRole="Attendance" ToRole="Teacher" />
+          <NavigationProperty Name="Student" Relationship="Self.FK__Attendanc__Stude__2A4B4B5E" FromRole="Attendance" ToRole="Student" />
+          <NavigationProperty Name="Subject" Relationship="Self.FK__Attendanc__Subje__2B3F6F97" FromRole="Attendance" ToRole="Subject" />
+          <NavigationProperty Name="Teacher" Relationship="Self.FK__Attendanc__Teach__2C3393D0" FromRole="Attendance" ToRole="Teacher" />
         </EntityType>
         <EntityType Name="Department">
           <Key>
@@ -481,9 +481,9 @@
           </Key>
           <Property Name="DID" Type="String" MaxLength="4" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <NavigationProperty Name="Students" Relationship="Self.FK__Student__Departm__1920BF5C" FromRole="Department" ToRole="Student" />
-          <NavigationProperty Name="Subjects" Relationship="Self.FK__Subject__Departm__15502E78" FromRole="Department" ToRole="Subject" />
-          <NavigationProperty Name="Teachers" Relationship="Self.FK__Teacher__Departm__1273C1CD" FromRole="Department" ToRole="Teacher" />
+          <NavigationProperty Name="Students" Relationship="Self.FK__Student__Departm__2D27B809" FromRole="Department" ToRole="Student" />
+          <NavigationProperty Name="Subjects" Relationship="Self.FK__Subject__Departm__2F10007B" FromRole="Department" ToRole="Subject" />
+          <NavigationProperty Name="Teachers" Relationship="Self.FK__Teacher__Departm__300424B4" FromRole="Department" ToRole="Teacher" />
         </EntityType>
         <EntityType Name="Student">
           <Key>
@@ -495,10 +495,10 @@
           <Property Name="Sem" Type="Int32" Nullable="false" />
           <Property Name="Department_DID" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
           <Property Name="Subject_SubCode" Type="String" MaxLength="7" FixedLength="false" Unicode="true" Nullable="false" />
-          <NavigationProperty Name="Attendances" Relationship="Self.FK__Attendanc__Stude__1CF15040" FromRole="Student" ToRole="Attendance" />
-          <NavigationProperty Name="Department" Relationship="Self.FK__Student__Departm__1920BF5C" FromRole="Student" ToRole="Department" />
-          <NavigationProperty Name="Subject" Relationship="Self.FK__Student__Subject__182C9B23" FromRole="Student" ToRole="Subject" />
-          <NavigationProperty Name="Teacher_Teaches_Student" Relationship="Self.FK__Teacher_T__Stude__21B6055D" FromRole="Student" ToRole="Teacher_Teaches_Student" />
+          <NavigationProperty Name="Attendances" Relationship="Self.FK__Attendanc__Stude__2A4B4B5E" FromRole="Student" ToRole="Attendance" />
+          <NavigationProperty Name="Department" Relationship="Self.FK__Student__Departm__2D27B809" FromRole="Student" ToRole="Department" />
+          <NavigationProperty Name="Subject" Relationship="Self.FK__Student__Subject__2E1BDC42" FromRole="Student" ToRole="Subject" />
+          <NavigationProperty Name="Teacher_Teaches_Student" Relationship="Self.FK__Teacher_T__Stude__31EC6D26" FromRole="Student" ToRole="Teacher_Teaches_Student" />
         </EntityType>
         <EntityType Name="Subject">
           <Key>
@@ -507,10 +507,10 @@
           <Property Name="SubCode" Type="String" MaxLength="7" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Department_DID" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="Attendances" Relationship="Self.FK__Attendanc__Subje__1BFD2C07" FromRole="Subject" ToRole="Attendance" />
-          <NavigationProperty Name="Department" Relationship="Self.FK__Subject__Departm__15502E78" FromRole="Subject" ToRole="Department" />
-          <NavigationProperty Name="Students" Relationship="Self.FK__Student__Subject__182C9B23" FromRole="Subject" ToRole="Student" />
-          <NavigationProperty Name="Teacher_Teaches_Student" Relationship="Self.FK__Teacher_T__Subje__20C1E124" FromRole="Subject" ToRole="Teacher_Teaches_Student" />
+          <NavigationProperty Name="Attendances" Relationship="Self.FK__Attendanc__Subje__2B3F6F97" FromRole="Subject" ToRole="Attendance" />
+          <NavigationProperty Name="Department" Relationship="Self.FK__Subject__Departm__2F10007B" FromRole="Subject" ToRole="Department" />
+          <NavigationProperty Name="Students" Relationship="Self.FK__Student__Subject__2E1BDC42" FromRole="Subject" ToRole="Student" />
+          <NavigationProperty Name="Teacher_Teaches_Student" Relationship="Self.FK__Teacher_T__Subje__32E0915F" FromRole="Subject" ToRole="Teacher_Teaches_Student" />
         </EntityType>
         <EntityType Name="Teacher">
           <Key>
@@ -520,10 +520,10 @@
           <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Department_DID" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
           <Property Name="REFID" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="AspNetUser" Relationship="Self.FK__Teacher__REFID__34C8D9D1" FromRole="Teacher" ToRole="AspNetUsers" />
-          <NavigationProperty Name="Attendances" Relationship="Self.FK__Attendanc__Teach__1DE57479" FromRole="Teacher" ToRole="Attendance" />
-          <NavigationProperty Name="Department" Relationship="Self.FK__Teacher__Departm__1273C1CD" FromRole="Teacher" ToRole="Department" />
-          <NavigationProperty Name="Teacher_Teaches_Student" Relationship="Self.FK__Teacher_T__Teach__22AA2996" FromRole="Teacher" ToRole="Teacher_Teaches_Student" />
+          <NavigationProperty Name="AspNetUser" Relationship="Self.FK__Teacher__REFID__30F848ED" FromRole="Teacher" ToRole="AspNetUsers" />
+          <NavigationProperty Name="Attendances" Relationship="Self.FK__Attendanc__Teach__2C3393D0" FromRole="Teacher" ToRole="Attendance" />
+          <NavigationProperty Name="Department" Relationship="Self.FK__Teacher__Departm__300424B4" FromRole="Teacher" ToRole="Department" />
+          <NavigationProperty Name="Teacher_Teaches_Student" Relationship="Self.FK__Teacher_T__Teach__33D4B598" FromRole="Teacher" ToRole="Teacher_Teaches_Student" />
         </EntityType>
         <EntityType Name="Teacher_Teaches_Student">
           <Key>
@@ -534,9 +534,9 @@
           <Property Name="Subject_SubCode" Type="String" MaxLength="7" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Student_USN" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Teacher_TID" Type="String" MaxLength="7" FixedLength="false" Unicode="true" Nullable="false" />
-          <NavigationProperty Name="Student" Relationship="Self.FK__Teacher_T__Stude__21B6055D" FromRole="Teacher_Teaches_Student" ToRole="Student" />
-          <NavigationProperty Name="Subject" Relationship="Self.FK__Teacher_T__Subje__20C1E124" FromRole="Teacher_Teaches_Student" ToRole="Subject" />
-          <NavigationProperty Name="Teacher" Relationship="Self.FK__Teacher_T__Teach__22AA2996" FromRole="Teacher_Teaches_Student" ToRole="Teacher" />
+          <NavigationProperty Name="Student" Relationship="Self.FK__Teacher_T__Stude__31EC6D26" FromRole="Teacher_Teaches_Student" ToRole="Student" />
+          <NavigationProperty Name="Subject" Relationship="Self.FK__Teacher_T__Subje__32E0915F" FromRole="Teacher_Teaches_Student" ToRole="Subject" />
+          <NavigationProperty Name="Teacher" Relationship="Self.FK__Teacher_T__Teach__33D4B598" FromRole="Teacher_Teaches_Student" ToRole="Teacher" />
         </EntityType>
         <Association Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
           <End Role="AspNetUsers" Type="Self.AspNetUser" Multiplicity="1">
@@ -566,7 +566,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Teacher__REFID__34C8D9D1">
+        <Association Name="FK__Teacher__REFID__30F848ED">
           <End Role="AspNetUsers" Type="Self.AspNetUser" Multiplicity="0..1" />
           <End Role="Teacher" Type="Self.Teacher" Multiplicity="*" />
           <ReferentialConstraint>
@@ -578,7 +578,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Attendanc__Stude__1CF15040">
+        <Association Name="FK__Attendanc__Stude__2A4B4B5E">
           <End Role="Student" Type="Self.Student" Multiplicity="1" />
           <End Role="Attendance" Type="Self.Attendance" Multiplicity="*" />
           <ReferentialConstraint>
@@ -590,7 +590,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Attendanc__Subje__1BFD2C07">
+        <Association Name="FK__Attendanc__Subje__2B3F6F97">
           <End Role="Subject" Type="Self.Subject" Multiplicity="1" />
           <End Role="Attendance" Type="Self.Attendance" Multiplicity="*" />
           <ReferentialConstraint>
@@ -602,7 +602,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Attendanc__Teach__1DE57479">
+        <Association Name="FK__Attendanc__Teach__2C3393D0">
           <End Role="Teacher" Type="Self.Teacher" Multiplicity="1" />
           <End Role="Attendance" Type="Self.Attendance" Multiplicity="*" />
           <ReferentialConstraint>
@@ -614,7 +614,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Student__Departm__1920BF5C">
+        <Association Name="FK__Student__Departm__2D27B809">
           <End Role="Department" Type="Self.Department" Multiplicity="0..1">
             <OnDelete Action="Cascade" />
           </End>
@@ -628,7 +628,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Subject__Departm__15502E78">
+        <Association Name="FK__Subject__Departm__2F10007B">
           <End Role="Department" Type="Self.Department" Multiplicity="0..1" />
           <End Role="Subject" Type="Self.Subject" Multiplicity="*" />
           <ReferentialConstraint>
@@ -640,7 +640,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Teacher__Departm__1273C1CD">
+        <Association Name="FK__Teacher__Departm__300424B4">
           <End Role="Department" Type="Self.Department" Multiplicity="0..1" />
           <End Role="Teacher" Type="Self.Teacher" Multiplicity="*" />
           <ReferentialConstraint>
@@ -652,7 +652,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Student__Subject__182C9B23">
+        <Association Name="FK__Student__Subject__2E1BDC42">
           <End Role="Subject" Type="Self.Subject" Multiplicity="1" />
           <End Role="Student" Type="Self.Student" Multiplicity="*" />
           <ReferentialConstraint>
@@ -664,7 +664,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Teacher_T__Stude__21B6055D">
+        <Association Name="FK__Teacher_T__Stude__31EC6D26">
           <End Role="Student" Type="Self.Student" Multiplicity="1" />
           <End Role="Teacher_Teaches_Student" Type="Self.Teacher_Teaches_Student" Multiplicity="*" />
           <ReferentialConstraint>
@@ -676,7 +676,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Teacher_T__Subje__20C1E124">
+        <Association Name="FK__Teacher_T__Subje__32E0915F">
           <End Role="Subject" Type="Self.Subject" Multiplicity="1" />
           <End Role="Teacher_Teaches_Student" Type="Self.Teacher_Teaches_Student" Multiplicity="*" />
           <ReferentialConstraint>
@@ -688,7 +688,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Teacher_T__Teach__22AA2996">
+        <Association Name="FK__Teacher_T__Teach__33D4B598">
           <End Role="Teacher" Type="Self.Teacher" Multiplicity="1" />
           <End Role="Teacher_Teaches_Student" Type="Self.Teacher_Teaches_Student" Multiplicity="*" />
           <ReferentialConstraint>
@@ -724,47 +724,47 @@
             <End Role="AspNetUsers" EntitySet="AspNetUsers" />
             <End Role="AspNetUserLogins" EntitySet="AspNetUserLogins" />
           </AssociationSet>
-          <AssociationSet Name="FK__Teacher__REFID__34C8D9D1" Association="Self.FK__Teacher__REFID__34C8D9D1">
+          <AssociationSet Name="FK__Teacher__REFID__30F848ED" Association="Self.FK__Teacher__REFID__30F848ED">
             <End Role="AspNetUsers" EntitySet="AspNetUsers" />
             <End Role="Teacher" EntitySet="Teachers" />
           </AssociationSet>
-          <AssociationSet Name="FK__Attendanc__Stude__1CF15040" Association="Self.FK__Attendanc__Stude__1CF15040">
+          <AssociationSet Name="FK__Attendanc__Stude__2A4B4B5E" Association="Self.FK__Attendanc__Stude__2A4B4B5E">
             <End Role="Student" EntitySet="Students" />
             <End Role="Attendance" EntitySet="Attendances" />
           </AssociationSet>
-          <AssociationSet Name="FK__Attendanc__Subje__1BFD2C07" Association="Self.FK__Attendanc__Subje__1BFD2C07">
+          <AssociationSet Name="FK__Attendanc__Subje__2B3F6F97" Association="Self.FK__Attendanc__Subje__2B3F6F97">
             <End Role="Subject" EntitySet="Subjects" />
             <End Role="Attendance" EntitySet="Attendances" />
           </AssociationSet>
-          <AssociationSet Name="FK__Attendanc__Teach__1DE57479" Association="Self.FK__Attendanc__Teach__1DE57479">
+          <AssociationSet Name="FK__Attendanc__Teach__2C3393D0" Association="Self.FK__Attendanc__Teach__2C3393D0">
             <End Role="Teacher" EntitySet="Teachers" />
             <End Role="Attendance" EntitySet="Attendances" />
           </AssociationSet>
-          <AssociationSet Name="FK__Student__Departm__1920BF5C" Association="Self.FK__Student__Departm__1920BF5C">
+          <AssociationSet Name="FK__Student__Departm__2D27B809" Association="Self.FK__Student__Departm__2D27B809">
             <End Role="Department" EntitySet="Departments" />
             <End Role="Student" EntitySet="Students" />
           </AssociationSet>
-          <AssociationSet Name="FK__Subject__Departm__15502E78" Association="Self.FK__Subject__Departm__15502E78">
+          <AssociationSet Name="FK__Subject__Departm__2F10007B" Association="Self.FK__Subject__Departm__2F10007B">
             <End Role="Department" EntitySet="Departments" />
             <End Role="Subject" EntitySet="Subjects" />
           </AssociationSet>
-          <AssociationSet Name="FK__Teacher__Departm__1273C1CD" Association="Self.FK__Teacher__Departm__1273C1CD">
+          <AssociationSet Name="FK__Teacher__Departm__300424B4" Association="Self.FK__Teacher__Departm__300424B4">
             <End Role="Department" EntitySet="Departments" />
             <End Role="Teacher" EntitySet="Teachers" />
           </AssociationSet>
-          <AssociationSet Name="FK__Student__Subject__182C9B23" Association="Self.FK__Student__Subject__182C9B23">
+          <AssociationSet Name="FK__Student__Subject__2E1BDC42" Association="Self.FK__Student__Subject__2E1BDC42">
             <End Role="Subject" EntitySet="Subjects" />
             <End Role="Student" EntitySet="Students" />
           </AssociationSet>
-          <AssociationSet Name="FK__Teacher_T__Stude__21B6055D" Association="Self.FK__Teacher_T__Stude__21B6055D">
+          <AssociationSet Name="FK__Teacher_T__Stude__31EC6D26" Association="Self.FK__Teacher_T__Stude__31EC6D26">
             <End Role="Student" EntitySet="Students" />
             <End Role="Teacher_Teaches_Student" EntitySet="Teacher_Teaches_Student" />
           </AssociationSet>
-          <AssociationSet Name="FK__Teacher_T__Subje__20C1E124" Association="Self.FK__Teacher_T__Subje__20C1E124">
+          <AssociationSet Name="FK__Teacher_T__Subje__32E0915F" Association="Self.FK__Teacher_T__Subje__32E0915F">
             <End Role="Subject" EntitySet="Subjects" />
             <End Role="Teacher_Teaches_Student" EntitySet="Teacher_Teaches_Student" />
           </AssociationSet>
-          <AssociationSet Name="FK__Teacher_T__Teach__22AA2996" Association="Self.FK__Teacher_T__Teach__22AA2996">
+          <AssociationSet Name="FK__Teacher_T__Teach__33D4B598" Association="Self.FK__Teacher_T__Teach__33D4B598">
             <End Role="Teacher" EntitySet="Teachers" />
             <End Role="Teacher_Teaches_Student" EntitySet="Teacher_Teaches_Student" />
           </AssociationSet>
