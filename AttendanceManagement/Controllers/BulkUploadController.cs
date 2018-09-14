@@ -26,16 +26,17 @@ namespace AttendanceManagement.Controllers
             return View();
         }
 
-        /// <summary>  
-        /// This function is used to download excel format.  
-        /// </summary>  
-        /// <param name="Path"></param>  
-        /// <returns>file</returns>  
-        public FileResult DownloadExcel()
-        {
-            string path = "/Doc/Details.xlsx";
-            return File(path, "application/vnd.ms-excel", "Details.xlsx");
-        }
+        // <summary>  
+        // This function is used to download excel format.  
+        // and exec it
+        // </summary>  
+        // <param name="Path"></param>  
+        // <returns>file</returns>  
+        //public FileResult DownloadExcel()
+        //{
+        //    string path = "/Doc/Details.xlsx";
+        //    return File(path, "application/vnd.ms-excel", "Details.xlsx");
+        //}
 
         [HttpPost]
         public JsonResult UploadExcel(Student students, HttpPostedFileBase FileUpload)
@@ -84,10 +85,10 @@ namespace AttendanceManagement.Controllers
                     DataTable dtable3 = ds3.Tables["ExcelTable"];
 
 
-                    string sheetName = "Student";
-                    string sheetName1 = "Subject";
-                    string sheetName2 = "Department";
-                    string sheetName3 = "Teacher";
+                    string sheetName = "Sheet1";
+                    string sheetName1 = "Sheet2";
+                    string sheetName2 = "Sheet3";
+                    string sheetName3 = "Sheet4";
 
                     var excelFile = new ExcelQueryFactory(pathToExcelFile);
                     var stud = from a in excelFile.Worksheet<Student>(sheetName) select a;
