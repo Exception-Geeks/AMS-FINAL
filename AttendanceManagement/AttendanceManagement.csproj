@@ -1931,6 +1931,9 @@
     <Content Include="Views\ManageAttendance\AddAttendance.cshtml" />
     <Content Include="Views\Shared\_APLoginPartial.cshtml" />
     <Content Include="Views\EditTeacherProfile\Index.cshtml" />
+    <Content Include="Views\EditTeacherProfile\AddPhoneNumber.cshtml" />
+    <Content Include="Views\EditTeacherProfile\ChangePassword.cshtml" />
+    <Content Include="Views\EditTeacherProfile\ManageLogins.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
