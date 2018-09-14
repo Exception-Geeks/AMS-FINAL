@@ -207,6 +207,7 @@
     <Compile Include="Controllers\AdminPortalController.cs" />
     <Compile Include="Controllers\BulkUploadController.cs" />
     <Compile Include="Controllers\DepartmentsController.cs" />
+    <Compile Include="Controllers\EditTeacherProfileController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageAttendanceController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -1929,6 +1930,7 @@
     <Content Include="scss\_variables.scss" />
     <Content Include="Views\ManageAttendance\AddAttendance.cshtml" />
     <Content Include="Views\Shared\_APLoginPartial.cshtml" />
+    <Content Include="Views\EditTeacherProfile\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
