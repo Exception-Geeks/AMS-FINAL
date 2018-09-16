@@ -1,0 +1,113 @@
+﻿@using Microsoft.AspNet.Identity
+@using System.Linq;
+@using AttendanceManagement.Models;
+
+
+@model AttendanceManagement.Models.IndexViewModel
+
+
+@{
+    ViewBag.Title = "Create";
+
+}
+
+
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif] -->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif] -->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif] -->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="">
+<!--<![endif]-->
+
+<body>
+
+            <div class="animated fadeIn">
+
+                <div class="col-lg-1"> </div>
+                <div class="col-lg-10 ">
+                    <div class="card">
+                        <div class="card-header">
+                            <strong>Change your account settings</strong>
+                        </div>
+                        <div class="card-body card-block">
+                            <form action="" method="post" enctype="multipart/form-data" class="form-horizontal">
+
+
+
+                                <div>
+                                    <dl class="dl-horizontal">
+                                        <dt>Password</dt>
+                                        <dd>
+                                            [
+                                            @if (Model.HasPassword)
+                                            {
+                                                @Html.ActionLink("Change your password", "ChangePassword")
+                                            }
+                                            else
+                                            {
+                                                @Html.ActionLink("Create", "SetPassword")
+                                            }
+                                            ]
+                                        </dd>
+                                        <dt>External Logins</dt>
+                                        <dd>
+                                            @Model.Logins.Count [
+                                            @Html.ActionLink("Manage", "ManageLogins") ]
+                                        </dd>
+                                        @*
+                                            Phone Numbers can used as a second factor of verification in a two-factor authentication system.
+
+                                             See <a href="https://go.microsoft.com/fwlink/?LinkId=403804">this article</a>
+                                                for details on setting up this ASP.NET application to support two-factor authentication using SMS.
+
+                                             Uncomment the following block after you have set up two-factor authentication
+                                        *@
+                                        @*
+                                            <dt>Phone Number:</dt>
+                                            <dd>
+                                                @(Model.PhoneNumber ?? "None")
+                                                @if (Model.PhoneNumber != null)
+                                                {
+                                                    <br />
+                                                    <text>[&nbsp;&nbsp;@Html.ActionLink("Change", "AddPhoneNumber")&nbsp;&nbsp;]</text>
+                                                    using (Html.BeginForm("RemovePhoneNumber", "Manage", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+                                                    {
+                                                        @Html.AntiForgeryToken()
+                                                        <text>[<input type="submit" value="Remove" class="btn-link" />]</text>
+                                                    }
+                                                }
+                                                else
+                                                {
+                                                    <text>[&nbsp;&nbsp;@Html.ActionLink("Add", "AddPhoneNumber")
+                                                }
+                                            </dd>
+                                        *@
+                                        <dt>Two-Factor Authentication:</dt>
+                                        <dd>
+                                            <p>
+                                                There are no two-factor authentication providers configured. See <a href="https://go.microsoft.com/fwlink/?LinkId=403804">this article</a>
+                                                for details on setting up this ASP.NET application to support two-factor authentication.
+                                            </p>
+
+                                        </dd>
+                                    </dl>
+                                </div>
+
+                            </form>
+                        </div>
+
+                    </div>
+
+                    <div class="col-lg-1"></div>
+
+
+                </div><!-- .animated -->
+            </div><!-- .content -->
+
+        </div><!-- /#right-panel -->
+        <!-- Right Panel -->
+    </div>
+
+</body>
+</html>
